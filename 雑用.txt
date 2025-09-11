@@ -1,0 +1,6 @@
+コンパイル
+g++ -Wall -c "%f" -o "%e.o" `pkg-config --cflags opencv4` -I/usr/local/include
+
+ビルド
+g++ -o "%e" "%e.o" `pkg-config --libs opencv4` -lpigpio -lrt -pthread -L/usr/local/lib
+
